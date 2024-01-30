@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xscapintime.github.io/projects/just-another-thing/</loc>
-    <lastmod>2024-01-30T12:17:31-05:00</lastmod>
-  </url><url>
     <loc>https://xscapintime.github.io/</loc>
-    <lastmod>2024-01-30T15:26:34-05:00</lastmod>
+    <lastmod>2024-01-30T15:46:51-05:00</lastmod>
+  </url><url>
+    <loc>https://xscapintime.github.io/projects/perhaps-no/</loc>
+    <lastmod>2024-01-30T15:46:51-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/posts/</loc>
-    <lastmod>2024-01-30T15:26:34-05:00</lastmod>
+    <lastmod>2024-01-30T15:46:51-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/projects/</loc>
-    <lastmod>2024-01-30T12:17:31-05:00</lastmod>
+    <lastmod>2024-01-30T15:46:51-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/tags/</loc>
-    <lastmod>2024-01-30T12:17:31-05:00</lastmod>
+    <lastmod>2024-01-30T15:46:51-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/tags/test/</loc>
+    <lastmod>2024-01-30T15:46:51-05:00</lastmod>
+  </url><url>
+    <loc>https://xscapintime.github.io/posts/test3/</loc>
+    <lastmod>2024-01-30T15:46:51-05:00</lastmod>
+  </url><url>
+    <loc>https://xscapintime.github.io/projects/just-another-thing/</loc>
     <lastmod>2024-01-30T12:17:31-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/posts/test/</loc>
