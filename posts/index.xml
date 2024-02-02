@@ -6,14 +6,37 @@
     <description>Recent content in Posts on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jan 2024 15:46:51 -0500</lastBuildDate><atom:link href="https://xscapintime.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Feb 2024 15:01:42 -0500</lastBuildDate><atom:link href="https://xscapintime.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test3</title>
-      <link>https://xscapintime.github.io/posts/test3/</link>
-      <pubDate>Tue, 30 Jan 2024 15:46:51 -0500</pubDate>
+      <title>Cal27 RNASeq</title>
+      <link>https://xscapintime.github.io/posts/cal27_rnaseq/</link>
+      <pubDate>Fri, 02 Feb 2024 15:01:42 -0500</pubDate>
       
-      <guid>https://xscapintime.github.io/posts/test3/</guid>
-      <description></description>
+      <guid>https://xscapintime.github.io/posts/cal27_rnaseq/</guid>
+      <description>&lt;h1 id=&#34;ca27-rna-seq-data-analysis&#34;&gt;Ca27 RNA-seq data analysis &lt;a href=&#34;#ca27-rna-seq-data-analysis&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h1&gt;&lt;h2 id=&#34;1-alignemnt-based-quantification&#34;&gt;1. Alignemnt-based quantification &lt;a href=&#34;#1-alignemnt-based-quantification&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h2 id=&#34;11-methods-and-tools&#34;&gt;1.1 Methods and tools &lt;a href=&#34;#11-methods-and-tools&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;aligner: STAR&lt;/li&gt;
+&lt;li&gt;quantificaiton: TEcount from TEtranscript&lt;/li&gt;
+&lt;li&gt;reference: T2T-CHM13.v2, chm13.draft_v2.0.gene_annotation, repeatmasker track from &lt;a href=&#34;https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/&#34;&gt;https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12-de-analysis&#34;&gt;1.2 DE analysis &lt;a href=&#34;#12-de-analysis&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;genes/TEs with raw count &amp;lt;= 10 in half of the smaples were filtered&lt;/li&gt;
+&lt;li&gt;contrast design: &lt;code&gt;~genotype&lt;/code&gt; KOs vs WT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;121-sample-clustering&#34;&gt;1.2.1 Sample clustering &lt;a href=&#34;#121-sample-clustering&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;pics/pca_all.png&#34; alt=&#34;pca_all&#34;&gt;
+&lt;img src=&#34;pics/sample-distance-heatmap.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;122-volcano-plots-of-all-genestessats&#34;&gt;1.2.2 Volcano plots of all genes/TEs/Sats &lt;a href=&#34;#122-volcano-plots-of-all-genestessats&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;assets/17069051190543.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;assets/17069051499865.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;123-volcano-plots-of-tessats-only&#34;&gt;1.2.3 Volcano plots of TEs/Sats only &lt;a href=&#34;#123-volcano-plots-of-tessats-only&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;assets/17069052389509.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;assets/17069054248180.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;124-normalized-counts&#34;&gt;1.2.4 Normalized counts &lt;a href=&#34;#124-normalized-counts&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;median of ratios, between samples
+&lt;img src=&#34;assets/17069058710820.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;assets/17069059851986.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;assets/17069059415141.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;assets/17069059560801.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;assets/17069060602434.jpg&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>

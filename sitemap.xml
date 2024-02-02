@@ -2,26 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xscapintime.github.io/</loc>
-    <lastmod>2024-01-30T15:47:46-05:00</lastmod>
+    <loc>https://xscapintime.github.io/tags/cal27/</loc>
+    <lastmod>2024-02-02T15:01:42-05:00</lastmod>
   </url><url>
-    <loc>https://xscapintime.github.io/projects/perhaps-no/</loc>
-    <lastmod>2024-01-30T15:47:46-05:00</lastmod>
+    <loc>https://xscapintime.github.io/posts/cal27_rnaseq/</loc>
+    <lastmod>2024-02-02T15:01:42-05:00</lastmod>
+  </url><url>
+    <loc>https://xscapintime.github.io/</loc>
+    <lastmod>2024-02-02T15:01:42-05:00</lastmod>
+  </url><url>
+    <loc>https://xscapintime.github.io/projects/pericentromeric-satellites/</loc>
+    <lastmod>2024-02-02T15:01:42-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/posts/</loc>
-    <lastmod>2024-01-30T15:47:46-05:00</lastmod>
+    <lastmod>2024-02-02T15:01:42-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/projects/</loc>
-    <lastmod>2024-01-30T15:47:46-05:00</lastmod>
+    <lastmod>2024-02-02T15:01:42-05:00</lastmod>
+  </url><url>
+    <loc>https://xscapintime.github.io/tags/rna-seq/</loc>
+    <lastmod>2024-02-02T15:01:42-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/tags/</loc>
-    <lastmod>2024-01-30T15:47:46-05:00</lastmod>
-  </url><url>
-    <loc>https://xscapintime.github.io/tags/test/</loc>
-    <lastmod>2024-01-30T15:47:46-05:00</lastmod>
-  </url><url>
-    <loc>https://xscapintime.github.io/posts/test3/</loc>
-    <lastmod>2024-01-30T15:47:46-05:00</lastmod>
+    <lastmod>2024-02-02T15:01:42-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/tags/10t/</loc>
     <lastmod>2024-01-16T16:10:36-05:00</lastmod>
@@ -32,13 +35,7 @@
     <loc>https://xscapintime.github.io/posts/mouse_major_satellite/</loc>
     <lastmod>2024-01-16T16:10:36-05:00</lastmod>
   </url><url>
-    <loc>https://xscapintime.github.io/projects/pericentromeric-satellites/</loc>
-    <lastmod>2024-01-16T16:10:36-05:00</lastmod>
-  </url><url>
     <loc>https://xscapintime.github.io/tags/satellite-repeat/</loc>
-    <lastmod>2024-01-16T16:10:36-05:00</lastmod>
-  </url><url>
-    <loc>https://xscapintime.github.io/tags/cal27/</loc>
     <lastmod>2024-01-16T16:10:36-05:00</lastmod>
   </url><url>
     <loc>https://xscapintime.github.io/posts/human_alpha_satellite/</loc>

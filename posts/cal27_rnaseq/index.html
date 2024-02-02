@@ -7,12 +7,12 @@
 
 
 
-<title>Mouse Major Satellite | Notes</title>
-<link rel="canonical" href="https://xscapintime.github.io/posts/mouse_major_satellite/">
+<title>Cal27 RNASeq | Notes</title>
+<link rel="canonical" href="https://xscapintime.github.io/posts/cal27_rnaseq/">
 <meta name="description" content=" " />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Mouse Major Satellite | Notes" />
-<meta property="og:url" content="https://xscapintime.github.io/posts/mouse_major_satellite/" />
+<meta property="og:title" content="Cal27 RNASeq | Notes" />
+<meta property="og:url" content="https://xscapintime.github.io/posts/cal27_rnaseq/" />
 <meta property="og:description" content=" " />
 
 
@@ -57,13 +57,13 @@
                 
 
 <section class="single">
-    <h1 class="title">Mouse Major Satellite</h1>
+    <h1 class="title">Cal27 RNASeq</h1>
 
     <div class="tip">
-        <time datetime="2024-01-16 16:10:36 -0500 EST">2024-01-16</time>
+        <time datetime="2024-02-02 15:01:42 -0500 EST">2024-02-02</time>
         
         <span class="split">·</span>
-        <span> 106 words </span>
+        <span> 75 words </span>
         <span class="split">·</span>
         <span>
             1 minutes to read
@@ -84,11 +84,9 @@
             <div>
                 Tags:
                 
-                    <a href="/tags/chip-seq">ChIP-seq</a>
+                    <a href="/tags/cal27">cal27</a>
                 
-                    <a href="/tags/satellite-repeat">satellite repeat</a>
-                
-                    <a href="/tags/10t">10T</a>
+                    <a href="/tags/rna-seq">RNA-seq</a>
                 
             </div>
         
@@ -97,31 +95,29 @@
     <hr />
 
     <div class="content">
-        <h2 id="cell-typeline">Cell type/line <a href="#cell-typeline" class="anchor">🔗</a></h2><p>Mouse embryo fibroblast, C3H/10T1/2 (10T).</p>
-<h2 id="method">Method <a href="#method" class="anchor">🔗</a></h2><ul>
-<li>Since there are still gaps in mm39 reference</li>
-<li>Extract sequence-specific reads from fastq files using <code>seqkit</code>, avoiding mapping (may also make it easy to compare ChIP-seq and cut&amp;run …?)</li>
-<li>“satellite-specific” sequence from Pailles et al. 2022<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.
-<blockquote>
-<p>“GACGACTTGAAAAATGACGAAATC|CATATTCCAGGTCCTTCAGTGTGC|GAAAAAGGTGGAAAATTTAGA|AGAAAACTGAAAATCATGGAAAAT|GATTTCGTCATTTTTCAAGTCGTC|GCACACTGAAGGACCTGGAATATG|TCTAAATTTTCCACCTTTTTC|ATTTTCCATGATTTTCAGTTTTCT”</p>
-</blockquote>
-</li>
+        <h1 id="ca27-rna-seq-data-analysis">Ca27 RNA-seq data analysis <a href="#ca27-rna-seq-data-analysis" class="anchor">🔗</a></h1><h2 id="1-alignemnt-based-quantification">1. Alignemnt-based quantification <a href="#1-alignemnt-based-quantification" class="anchor">🔗</a></h2><h2 id="11-methods-and-tools">1.1 Methods and tools <a href="#11-methods-and-tools" class="anchor">🔗</a></h2><ul>
+<li>aligner: STAR</li>
+<li>quantificaiton: TEcount from TEtranscript</li>
+<li>reference: T2T-CHM13.v2, chm13.draft_v2.0.gene_annotation, repeatmasker track from <a href="https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/">https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/</a></li>
 </ul>
-<h2 id="heatmap">Heatmap <a href="#heatmap" class="anchor">🔗</a></h2><center><img src="assets/17053397160584.jpg" style="zoom:70%;"/></center>
-<h2 id="boxplot">Boxplot <a href="#boxplot" class="anchor">🔗</a></h2><center><img src="assets/17053397645021.jpg" style="zoom:70%;"/></center>
-<h3 id="split-h3k36m3-samples-by-antibodies">Split H3K36m3 samples by antibodies <a href="#split-h3k36m3-samples-by-antibodies" class="anchor">🔗</a></h3><ul>
-<li>AM: Active Motif, cross-react with H3K36me2</li>
-<li>IV: Invitrogen, cross-react with H3K9me3</li>
+<h2 id="12-de-analysis">1.2 DE analysis <a href="#12-de-analysis" class="anchor">🔗</a></h2><ul>
+<li>genes/TEs with raw count &lt;= 10 in half of the smaples were filtered</li>
+<li>contrast design: <code>~genotype</code> KOs vs WT</li>
 </ul>
-<center><img src="assets/17053398445975.jpg" style="zoom:70%;"/></center>
-<h2 id="ref">Ref. <a href="#ref" class="anchor">🔗</a></h2><div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>Pailles, Mélanie, Mélanie Hirlemann, Vincent Brochard, Martine Chebrout, Jean-François Oudin, Hendrik Marks, Alice Jouneau, and Amélie Bonnet-Garnier. 2022. “H3K27me3 at Pericentromeric Heterochromatin Is a Defining Feature of the Early Mouse Blastocyst.” Scientific Reports 12 (1): 13908. <a href="https://doi.org/10.1038/s41598-022-17730-x">https://doi.org/10.1038/s41598-022-17730-x</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
+<h3 id="121-sample-clustering">1.2.1 Sample clustering <a href="#121-sample-clustering" class="anchor">🔗</a></h3><p><img src="pics/pca_all.png" alt="pca_all">
+<img src="pics/sample-distance-heatmap.png" alt=""></p>
+<h3 id="122-volcano-plots-of-all-genestessats">1.2.2 Volcano plots of all genes/TEs/Sats <a href="#122-volcano-plots-of-all-genestessats" class="anchor">🔗</a></h3><p><img src="assets/17069051190543.jpg" alt="">
+<img src="assets/17069051499865.jpg" alt=""></p>
+<h3 id="123-volcano-plots-of-tessats-only">1.2.3 Volcano plots of TEs/Sats only <a href="#123-volcano-plots-of-tessats-only" class="anchor">🔗</a></h3><p><img src="assets/17069052389509.jpg" alt="">
+<img src="assets/17069054248180.jpg" alt=""></p>
+<h3 id="124-normalized-counts">1.2.4 Normalized counts <a href="#124-normalized-counts" class="anchor">🔗</a></h3><ul>
+<li>median of ratios, between samples
+<img src="assets/17069058710820.jpg" alt="">
+<img src="assets/17069059851986.jpg" alt="">
+<img src="assets/17069059415141.jpg" alt="">
+<img src="assets/17069059560801.jpg" alt="">
+<img src="assets/17069060602434.jpg" alt=""></li>
+</ul>
 
     </div>
 
