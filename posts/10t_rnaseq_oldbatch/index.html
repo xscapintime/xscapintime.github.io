@@ -7,12 +7,12 @@
 
 
 
-<title>Human Alpha Satellite | Notes</title>
-<link rel="canonical" href="https://xscapintime.github.io/posts/human_alpha_satellite/">
+<title>10T RNA-Seq old batch | Notes</title>
+<link rel="canonical" href="https://xscapintime.github.io/posts/10t_rnaseq_oldbatch/">
 <meta name="description" content=" " />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Human Alpha Satellite | Notes" />
-<meta property="og:url" content="https://xscapintime.github.io/posts/human_alpha_satellite/" />
+<meta property="og:title" content="10T RNA-Seq old batch | Notes" />
+<meta property="og:url" content="https://xscapintime.github.io/posts/10t_rnaseq_oldbatch/" />
 <meta property="og:description" content=" " />
 
 
@@ -57,13 +57,13 @@
                 
 
 <section class="single">
-    <h1 class="title">Human Alpha Satellite</h1>
+    <h1 class="title">10T RNA-Seq old batch</h1>
 
     <div class="tip">
-        <time datetime="2024-01-16 16:10:36 -0500 EST">2024-01-16</time>
+        <time datetime="2024-02-08 12:46:27 -0500 EST">2024-02-08</time>
         
         <span class="split">·</span>
-        <span> 60 words </span>
+        <span> 92 words </span>
         <span class="split">·</span>
         <span>
             1 minutes to read
@@ -84,11 +84,9 @@
             <div>
                 Tags:
                 
-                    <a href="/tags/chip-seq">ChIP-seq</a>
+                    <a href="/tags/10t">10T</a>
                 
-                    <a href="/tags/satellite-repeat">satellite repeat</a>
-                
-                    <a href="/tags/cal27">cal27</a>
+                    <a href="/tags/rna-seq">RNA-seq</a>
                 
             </div>
         
@@ -97,21 +95,30 @@
     <hr />
 
     <div class="content">
-        <h2 id="cell-typeline">Cell type/line <a href="#cell-typeline" class="anchor">🔗</a></h2><p>Head and neck cancer epithelial cells, Cal27.</p>
-<h2 id="method">Method <a href="#method" class="anchor">🔗</a></h2><ul>
-<li><code>deeptools ComptueMatrix</code> profiling</li>
-<li>Only kept active HOR; one per chromosome</li>
-<li>More consistent in length</li>
-<li>Most of them &gt; 1.0 mb except the one on chr21</li>
-<li>Body length: 2.0 mb</li>
-<li>Flanking: 2.0 mb each side</li>
+        <h1 id="10t-rna-seq-data-analysis">10T RNA-seq data analysis <a href="#10t-rna-seq-data-analysis" class="anchor">🔗</a></h1><h3 id="data">data <a href="#data" class="anchor">🔗</a></h3><ul>
+<li>bam file path: <code>/project/6007495/shareroot/projects/cell_lines/10Ts/RNAseq/checkout/OLD/C3H10T1/</code></li>
+<li>converted to fastq and realigned</li>
+<li>used a diff. RNA-seq kit</li>
 </ul>
-<h2 id="input-and-histone-marks">Input and histone marks <a href="#input-and-histone-marks" class="anchor">🔗</a></h2><h3 id="seletced-samples">Seletced samples <a href="#seletced-samples" class="anchor">🔗</a></h3><center><img src="assets/matrix.cal27_input.2mdist.100kbin.activehor.png" width="70%" /></center>
-<center><img src="assets/matrix.cal27_k36me2.2mdist.100kbin.activehor.png" width="70%" /></center>
-<center><img src="assets/matrix.cal27_k27me3.2mdist.100kbin.activehor.png" width="70%" /></center>
-<center><img src="assets/matrix.cal27_k9me3.2mdist.100kbin.activehor.png" width="70%" /></center>
-<h3 id="all-samples">All samples <a href="#all-samples" class="anchor">🔗</a></h3><p><img src="assets/Picture1.png" alt=""></p>
-<h2 id="igv-screenshot-for-chr8">IGV screenshot for chr8 <a href="#igv-screenshot-for-chr8" class="anchor">🔗</a></h2><center><img src="assets/Screenshot 2024-01-03 at 13.44.33.png" width="80%" /></center>
+<h3 id="nomenclature">nomenclature <a href="#nomenclature" class="anchor">🔗</a></h3><ul>
+<li>GSAT_MM:Satellite:Satellite: major satellite</li>
+<li>SYNREP_MM:Satellite:Satellite: minor satellite</li>
+</ul>
+<h2 id="1-alignemnt-based-quantification">1. Alignemnt-based quantification <a href="#1-alignemnt-based-quantification" class="anchor">🔗</a></h2><h2 id="11-methods-and-tools">1.1 Methods and tools <a href="#11-methods-and-tools" class="anchor">🔗</a></h2><ul>
+<li>aligner: STAR</li>
+<li>quantificaiton: TEcount from TEtranscript</li>
+<li>reference: mm39, mm39.gencode.vM33.annotation.gtf, repeatmasker track from <a href="https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/">https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/</a></li>
+</ul>
+<h2 id="12-de-analysis">1.2 DE analysis <a href="#12-de-analysis" class="anchor">🔗</a></h2><ul>
+<li>genes/TEs with raw count &lt;= 10 in half of the smaples were filtered</li>
+<li>contrast design: <code>~genotype</code> KOs vs WT</li>
+</ul>
+<h3 id="121-sample-clustering">1.2.1 Sample clustering <a href="#121-sample-clustering" class="anchor">🔗</a></h3><p><img src="assets/olddiff_pca.png" alt="olddiff_pca">
+<img src="assets/olddiff_sample-distance-heatmap.png" alt="olddiff_sample-distance-heatmap"></p>
+<h3 id="122-volcano-plots-of-all-genestessats">1.2.2 Volcano plots of all genes/TEs/Sats <a href="#122-volcano-plots-of-all-genestessats" class="anchor">🔗</a></h3><pre tabindex="0"><code>- extreme p-values...
+</code></pre><p><img src="assets/17074172782908.jpg" alt=""></p>
+<h3 id="123-volcano-plots-of-tessats-only">1.2.3 Volcano plots of TEs/Sats only <a href="#123-volcano-plots-of-tessats-only" class="anchor">🔗</a></h3><p><img src="assets/17074173846563.jpg" alt=""></p>
+
     </div>
 
     
