@@ -6,7 +6,30 @@
     <description>Recent content in RNA-seq on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Feb 2024 15:01:42 -0500</lastBuildDate><atom:link href="https://xscapintime.github.io/tags/rna-seq/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Feb 2024 12:01:11 -0500</lastBuildDate><atom:link href="https://xscapintime.github.io/tags/rna-seq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>10T RNA-Seq new batch</title>
+      <link>https://xscapintime.github.io/posts/10t_rnaseq_newbatch/</link>
+      <pubDate>Thu, 08 Feb 2024 12:01:11 -0500</pubDate>
+      
+      <guid>https://xscapintime.github.io/posts/10t_rnaseq_newbatch/</guid>
+      <description>&lt;h1 id=&#34;10t-rna-seq-data-analysis&#34;&gt;10T RNA-seq data analysis &lt;a href=&#34;#10t-rna-seq-data-analysis&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;raw data path: &lt;code&gt;/project/6007495/shareroot/projects/cell_lines/10Ts/RNAseq/local&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-alignemnt-based-quantification&#34;&gt;1. Alignemnt-based quantification &lt;a href=&#34;#1-alignemnt-based-quantification&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;h2 id=&#34;11-methods-and-tools&#34;&gt;1.1 Methods and tools &lt;a href=&#34;#11-methods-and-tools&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;aligner: STAR&lt;/li&gt;
+&lt;li&gt;quantificaiton: TEcount from TEtranscript&lt;/li&gt;
+&lt;li&gt;reference: mm39, mm39.gencode.vM33.annotation.gtf, repeatmasker track from &lt;a href=&#34;https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/&#34;&gt;https://labshare.cshl.edu/shares/mhammelllab/www-data/TEtranscripts/TE_GTF/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12-de-analysis&#34;&gt;1.2 DE analysis &lt;a href=&#34;#12-de-analysis&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;genes/TEs with raw count &amp;lt;= 10 in half of the smaples were filtered&lt;/li&gt;
+&lt;li&gt;contrast design: &lt;code&gt;~genotype&lt;/code&gt; KOs vs WT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;121-sample-clustering&#34;&gt;1.2.1 Sample clustering &lt;a href=&#34;#121-sample-clustering&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;assets/new_pca.png&#34; alt=&#34;new_pca&#34;&gt;
+&lt;img src=&#34;assets/new_sample-distance-heatmap.png&#34; alt=&#34;new_sample-distance-heatmap&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;122-volcano-plots-of-all-genestessats&#34;&gt;1.2.2 Volcano plots of all genes/TEs/Sats &lt;a href=&#34;#122-volcano-plots-of-all-genestessats&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&#34;123-volcano-plots-of-tessats-only&#34;&gt;1.2.3 Volcano plots of TEs/Sats only &lt;a href=&#34;#123-volcano-plots-of-tessats-only&#34; class=&#34;anchor&#34;&gt;🔗&lt;/a&gt;&lt;/h3&gt;</description>
+    </item>
+    
     <item>
       <title>Cal27 RNASeq</title>
       <link>https://xscapintime.github.io/posts/cal27_rnaseq/</link>
